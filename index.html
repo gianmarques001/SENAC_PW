@@ -3,49 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Leia Livros</title>
     <link rel="stylesheet" href="indexStyles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/e-book.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="container">
       <header>
         <nav>
-          <div class="logo">LOGO</div>
+          <div class="logo"><img src="assets/images/e-book.png" /></div>
           <div class="opcs">
             <ul>
-              <li>Busca</li>
-              <li>Lançamentos</li>
-              <li>Conta</li>
+              <li><a href="busca">Busca</a></li>
+              <li><a href="lancamentos">Lançamentos</a></li>
+              <li><a href="conta">Conta</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
       <section class="principal">
-        <h3>Livros do mês</h3>
+        <h2 class="livrosMes">Livros do mês</h2>
         <div class="container-books">
           <div class="container-book">
-            <img
-              src="https://images.unsplash.com/photo-1641261689151-7f818366e684?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNhcGElMjBkbyUyMGxpdnJvJTIwJTdDfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <div class="container-book-img">
+              <img
+                src="https://images.pexels.com/photos/6475044/pexels-photo-6475044.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt=""
+              />
+            </div>
+            <div class="container-book-content">
+              <h2>Título</h2>
+              <p class="sinopse">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                quasi.
+              </p>
+              <a href="#" class="botao">saiba mais</a>
+            </div>
           </div>
           <div class="container-book">
-            <img
-              src="https://images.unsplash.com/photo-1641261689151-7f818366e684?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNhcGElMjBkbyUyMGxpdnJvJTIwJTdDfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <div class="container-book-img">
+              <img
+                src="https://images.pexels.com/photos/6475044/pexels-photo-6475044.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt=""
+              />
+            </div>
+            <div class="container-book-content">
+              <h2>Título Livro</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                quasi.
+              </p>
+              <a href="#" class="botao">detalhes</a>
+            </div>
           </div>
           <div class="container-book">
-            <img
-              src="https://images.unsplash.com/photo-1641261689151-7f818366e684?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNhcGElMjBkbyUyMGxpdnJvJTIwJTdDfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <div class="container-book-img">
+              <img
+                src="https://images.pexels.com/photos/6475044/pexels-photo-6475044.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt=""
+              />
+            </div>
+            <div class="container-book-content">
+              <h2>Título Livro</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                quasi.
+              </p>
+              <a href="#" class="botao">detalhes</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section>Recomendacoes</section>
+      <section>
+        <div>
+          <h4>Participe do nosso clube do livro</h4>
+        </div>
+          <div>Todas as quartas e sextas!</div>
+        
+      </section>
+
+      <section class="formulario-container">
+        <h4>Receba novidades e descontos via e-mail!</h4>
+        <form action="">
+          <label for="email">Digite seu e-mail:</label>
+          <input type="email" />
+
+          <div>
+
+            <input type="checkbox" name="novidades" id="opcsNov" />
+            <label for="opcsNov">Novidades</label>
+            <br>
+            <input type="checkbox" name="descontos" id="opcsDesc" />
+            <label for="opcsDesc">Descontos</label>
+          </div>
+
+          <label for=""></label>
+
+          <div class="campo">
+            <label for="autores">Autor Favorito</label>
+            <select name="autores" id="autores">
+                <option value="">J.K Rowling</option>
+                <option value="">Stephen King</option>
+                <option value="">Rick Riordan</option>
+                <option value="">Dan Brown</option>
+          
+            </select>
+        </div>
+        </form>
+      </section>
     </div>
   </body>
 </html>
