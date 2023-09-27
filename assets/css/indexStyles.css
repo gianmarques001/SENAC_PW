@@ -181,7 +181,6 @@ input[type="checkbox"]{
 }
 
 .form-top, .form-bottom {
-border: 1px solid black;
 text-align: center;
   margin-bottom: 4%;
 }
