@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leia Livros</title>
-    <link rel="stylesheet" href="css/indexStyles.css" />
+    <link rel="stylesheet" href="./assets/css/indexStyles.css" />
+    <script src="./assets/js/index.js" defer></script>
     <link
       rel="shortcut icon"
       href="assets/images/e-book.png"
@@ -53,12 +54,12 @@
               />
             </div>
             <div class="container-book-content">
-              <h2>Título Livro</h2>
-              <p>
+              <h2>Título</h2>
+              <p class="sinopse">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
                 quasi.
               </p>
-              <a href="#" class="botao">detalhes</a>
+              <a href="#" class="botao">saiba mais</a>
             </div>
           </div>
           <div class="container-book">
@@ -69,53 +70,79 @@
               />
             </div>
             <div class="container-book-content">
-              <h2>Título Livro</h2>
-              <p>
+              <h2>Título</h2>
+              <p class="sinopse">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
                 quasi.
               </p>
-              <a href="#" class="botao">detalhes</a>
+              <a href="#" class="botao">saiba mais</a>
             </div>
           </div>
+     
         </div>
       </section>
 
-      <section>
+    
+
+      <section class="formulario-container">
+        <h4>Participe do nosso sorteio!</h4>
+        <form action="">
+          <div class="formulario-content">
+            <div class="form-top">
+              <label for="nome" class="form-content-user">Nome:</label>
+              <input type="text" name="nome" id="nome">
+              <br>
+              <label for="email" class="form-content-user">Digite seu e-mail:</label>
+              <input type="email" name="email" id="email"/>
+              <br>
+              <label for="celular" class="form-content-user">WhatsApp:</label>
+              <input type="text" name="celular" id="celular">
+            </div>
+            <div class="form-bottom">
+              <div><h5>Receba novidade e descontos</h5></div>
+              <input type="checkbox" name="novidades" id="opcsNov" />
+              <label for="opcsNov">Novidades</label>
+              <br />
+              <input type="checkbox" name="descontos" id="opcsDesc" />
+              <label for="opcsDesc">Descontos</label>
+            </div>
+
+            <div class="form-content-livros">
+
+              <div class="form-livros">
+                <label for="livros">Livro para sorteio</label>
+                <br>
+                <input type="radio" name="livro" id="percyjackson">
+                <label for="percyjackson">Percy Jackson e o Ladrão de Raios</label>
+                <br>
+                <input type="radio" name="livro" id="hobbit">
+                <label for="hobbit">O Hobbit</label>
+                <br>
+                <input type="radio" name="livro" id="harrypotter">
+                <label for="harrypotter">Harry Potter e a Pedra Filosofal</label>
+                
+                
+              </div>
+              <div class="form-output">
+                <output id="outNome">Nome: </output>
+                <output id="outLivro">Livro Escolhido: </output>
+              </div>
+              
+            </div>
+      
+          </div>
+        </form>
+      </section>
+
+      <section class="clube-livro-container">
         <div>
           <h4>Participe do nosso clube do livro</h4>
         </div>
-          <div>Todas as quartas e sextas!</div>
-        
-      </section>
-
-      <section class="formulario-container">
-        <h4>Receba novidades e descontos via e-mail!</h4>
-        <form action="">
-          <label for="email">Digite seu e-mail:</label>
-          <input type="email" />
-
-          <div>
-
-            <input type="checkbox" name="novidades" id="opcsNov" />
-            <label for="opcsNov">Novidades</label>
-            <br>
-            <input type="checkbox" name="descontos" id="opcsDesc" />
-            <label for="opcsDesc">Descontos</label>
-          </div>
-
-          <label for=""></label>
-
-          <div class="campo">
-            <label for="autores">Autor Favorito</label>
-            <select name="autores" id="autores">
-                <option value="">J.K Rowling</option>
-                <option value="">Stephen King</option>
-                <option value="">Rick Riordan</option>
-                <option value="">Dan Brown</option>
-          
-            </select>
+        <div>
+          <h4>Todas as quartas e sextas!</h4>
+          <h5>Entre no nosso grupo do Whatsapp!</h5>
         </div>
-        </form>
+
       </section>
     </div>
   </body>
