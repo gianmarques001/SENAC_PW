@@ -6,28 +6,36 @@
     <title>Leia Livros</title>
     <link rel="stylesheet" href="./assets/css/indexStyles.css" />
     <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/menu.js" defer></script>
+
     <link
       rel="shortcut icon"
       href="assets/images/e-book.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <nav>
-          <div class="logo"><img src="assets/images/e-book.png" /></div>
-          <div class="opcs">
-            <ul>
-              <li><a href="busca">Busca</a></li>
-              <li><a href="lancamentos">Lançamentos</a></li>
-              <li><a href="conta">Conta</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+    <div class="logo"><img src="assets/images/e-book.png" /></div>
+    <div id="menu-icon">
+      <span class="material-symbols-outlined"> menu </span>
+    </div>
 
-      <section class="principal">
+    <aside id="menu">
+      <nav>
+        <ul>
+          <li><a href="#livrosmes">Livros do Mês</a></li>
+          <li><a href="#formulario">Sorteio</a></li>
+          <li><a href="#clube-livro-container">Clube do Livro</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="container">
+      <section id="livrosmes" class="principal">
         <h2 class="livrosMes">Livros do mês</h2>
         <div class="container-books">
           <div class="container-book">
@@ -78,63 +86,69 @@
               <a href="#" class="botao">saiba mais</a>
             </div>
           </div>
-     
         </div>
       </section>
 
-    
-
-      <section class="formulario-container">
-        <h4>Participe do nosso sorteio!</h4>
+      <section id="formulario" class="formulario-container">
+        <h4>Ganhe uma restauração do seu livro!</h4>
         <form action="">
           <div class="formulario-content">
             <div class="form-top">
               <label for="nome" class="form-content-user">Nome:</label>
-              <input type="text" name="nome" id="nome">
-              <br>
-              <label for="email" class="form-content-user">Digite seu e-mail:</label>
-              <input type="email" name="email" id="email"/>
-              <br>
-              <label for="celular" class="form-content-user">WhatsApp:</label>
-              <input type="text" name="celular" id="celular">
-            </div>
-            <div class="form-bottom">
-              <div><h5>Receba novidade e descontos</h5></div>
-              <input type="checkbox" name="novidades" id="opcsNov" />
-              <label for="opcsNov">Novidades</label>
+              <input type="text" name="nome" id="nome" />
               <br />
-              <input type="checkbox" name="descontos" id="opcsDesc" />
-              <label for="opcsDesc">Descontos</label>
+              <label for="email" class="form-content-user"
+                >Digite seu e-mail:</label
+              >
+              <input type="email" name="email" id="email" />
+              <br />
+              <label for="celular" class="form-content-user">WhatsApp:</label>
+              <input type="text" name="celular" id="celular" />
             </div>
+            <div class="form-bottom"></div>
 
             <div class="form-content-livros">
+              <div class="form-tipos">
+                <label for="tipos">Tipo de Reparo: </label>
+                <br />
+                <input type="radio" name="tipo" id="basica" />
+                <label for="basica"> Básica (apenas a higienização)</label>
+                <br />
+                <input type="radio" name="tipo" id="media" />
+                <label for="media">Média (higienização e encardenação)</label>
+                <br />
+                <input type="radio" name="tipo" id="completa" />
+                <label for="completa"
+                  >Completa (higienização, encardenação e restauração de
+                  páginas)</label
+                >
+              </div>
+              <div class="form-qtd">
+                <label for="qtdpags" class="form-content-user"
+                  >Qtd de páginas:</label
+                >
+                <input
+                  type="number"
+                  name="qtdpags"
+                  id="qtdpags"
+                  min="100"
+                  max="850"
+                />
+                <br />
+                <label for="anolivro">Ano do Livro</label>
+                <br />
+                <input type="range" id="anolivro" min="1990" max="2022" />
+              </div>
 
-              <div class="form-livros">
-                <label for="livros">Livro para sorteio</label>
-                <br>
-                <input type="radio" name="livro" id="percyjackson">
-                <label for="percyjackson">Percy Jackson e o Ladrão de Raios</label>
-                <br>
-                <input type="radio" name="livro" id="hobbit">
-                <label for="hobbit">O Hobbit</label>
-                <br>
-                <input type="radio" name="livro" id="harrypotter">
-                <label for="harrypotter">Harry Potter e a Pedra Filosofal</label>
-                
-                
-              </div>
               <div class="form-output">
-                <output id="outNome">Nome: </output>
-                <output id="outLivro">Livro Escolhido: </output>
+                <output id="outTipo">Orçamento R$: </output>
               </div>
-              
             </div>
-      
           </div>
         </form>
       </section>
 
-      <section class="clube-livro-container">
+      <section id="clube-livro-container" class="clube-livro-container">
         <div>
           <h4>Participe do nosso clube do livro</h4>
         </div>
@@ -142,7 +156,6 @@
           <h4>Todas as quartas e sextas!</h4>
           <h5>Entre no nosso grupo do Whatsapp!</h5>
         </div>
-
       </section>
     </div>
   </body>

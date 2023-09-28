@@ -22,61 +22,76 @@ body {
   color: white;
 }
 
+#menu-icon {
+    color: #FFF;
+    text-shadow: #000 2px 2px 2px;
+    position: fixed;
+    z-index: 10;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+#menu {
+
+    position: fixed;
+    background-color: #3296c0d8;
+    height: 110vh;
+    padding: 3rem;
+    z-index: 9;
+    right: 0;
+    transform: translateX(100%);
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+#menu.open {
+    transform: translateX(0);
+}
+
+#menu li {
+  padding: 1rem;
+  border-radius: .5rem;
+  transition: background-color .5s;
+
+}
+
+#menu li:hover {
+background-color: #252739;
+}
+.logo {
+  position: fixed;
+    z-index: 10;
+    left: 1rem;
+    top: 1rem;
+}
 a {
   color: white;
 }
 
-a:hover {
-  font-weight: bold;
-}
+
 
 h3,
 h2 {
   font-family: var(--font-title);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .container {
   height: 100vh;
 }
-header {
-  height: 1.5rem;
-  margin-bottom: 0.9rem;
-}
-
-nav {
-  align-items: center;
-  display: flex;
-  height: inherit;
-}
-
-.logo {
-  flex: 1;
-  padding-left: 1rem;
-}
-
-.opcs {
-  flex: 2;
-}
-
-.opcs ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 
 .principal {
+  padding-top: 4rem;
   height: 90%;
   width: 100%;
   margin: auto 0;
-
 }
 
-.livrosMes{
-  margin-top: 2rem;
+.livrosMes {
+  
   text-align: center;
 }
 
@@ -92,9 +107,7 @@ nav {
   height: 420px;
   border: 1px solid whitesmoke;
   overflow: hidden;
-
-  border-radius: .4rem;
-
+  border-radius: 0.4rem;
 }
 
 .container-book:hover .container-book-content {
@@ -103,11 +116,9 @@ nav {
   filter: alpha(opacity=40);
 }
 
-
 .container-book-img {
   height: 100%;
   width: 100%;
-
 }
 
 .container-book-content {
@@ -117,7 +128,7 @@ nav {
   top: 28%;
   color: whitesmoke;
   overflow: hidden;
- 
+
   max-width: 300px;
   opacity: 0;
   transform: translateY(2rem);
@@ -130,16 +141,16 @@ nav {
 }
 
 .sinopse {
-  margin: .6rem 0;
+  margin: 0.6rem 0;
   text-align: justify;
 }
 
 .botao {
-align-self: flex-end;
+  align-self: flex-end;
 }
 
 .formulario-container {
-    margin: 5rem;
+  margin: 5rem;
   padding: 2rem;
   text-align: center;
   border: 1px solid whitesmoke;
@@ -147,36 +158,36 @@ align-self: flex-end;
 }
 
 form {
-  margin-top: .8rem;
+  margin-top: 0.8rem;
 }
 .formulario-content {
-  text-align:left ;
+  text-align: left;
 }
 input {
   outline: none;
 }
 
-input[type="email"], input[type="text"]{
+input[type="email"],
+input[type="text"] {
   color: whitesmoke;
   border: none;
   background: none;
   border-bottom: 1px solid wheat;
   width: 300px;
 }
-input[type="email"]:focus{
-color: whitesmoke;
+input[type="email"]:focus {
+  color: whitesmoke;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   accent-color: whitesmoke;
 }
 
-.form-top, .form-bottom {
-text-align: center;
+.form-top,
+.form-bottom {
+  text-align: center;
   margin-bottom: 4%;
 }
-
-
 
 .form-content-user {
   display: inline-block;
@@ -186,14 +197,13 @@ text-align: center;
 
 .form-content-livros {
   display: flex;
+  align-items: center;
+  
 }
 
-.form-livros {
+.form-tipos {
   flex: 0.5;
 }
-
-.form-output {
-  flex: 0.5;
-  display: flex;
-  flex-direction: column;
+.form-qtd {
+flex: 0.5;
 }
